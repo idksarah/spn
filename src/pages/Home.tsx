@@ -1,5 +1,5 @@
 
-import saengJui from '../assets/saeng-jui.jpg'
+import saengJui from '../assets/highExposure/transformedSaengjui.jpg'
 import footer from '../assets/footer.jpg'
 
 import {Link} from "react-router-dom"
@@ -21,11 +21,11 @@ export default function Home () {
             <p>sooo...</p>
             <p>uh.</p>
             </section>'
-            <section style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+            <section className='transition'>
             <h2>ah. nvm.</h2>
             <h2 style={{paddingTop: '20em'}}>you're on my site. it's about me, over here, cowboy.</h2>
             </section>
-            <section>
+            <section className='spn'>
             <h1>sarah park ngai</h1>
             <h2 className='cursor' onClick={toggleShow}>contact info</h2>
             <section id='contact' className={`cursor ${show ? '': ' hidden '}`}>
@@ -36,8 +36,11 @@ export default function Home () {
                     <li>dm me if you need other contact info</li>
                 </ul>
             </section>
-            <img src={saengJui} alt="saeng jui"></img>
-            <h2 className='paragraph'>i’m a 16 year old korean-chinese californian girl. i’m not really sure where i want to go. i do robotics and am attempting usaco. i’m currently learning about computer graphics and computer vision.  i like c++</h2>
+            <section className='saengJuiSection'>
+                <img src={saengJui} className='saengJui' alt="saeng jui" style={{height: '40em'} }></img>
+                <p>my cat, by the way</p>
+            </section>
+            <h2 className='paragraph'>i’m a 16 year old korean-chinese girl. i’m not really sure where i want to go. i do robotics and am attempting usaco. i’m currently learning about computer graphics and computer vision.  i like c++</h2>
             <h2 className='paragraph'>current thoughts? or quote? or whatever? <br></br>
             → if you don’t stick to what you care about, you’ll be stuck with something you don’t. either way, life demands commitment.</h2>
             <h2>directory</h2>
