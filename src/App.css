@@ -1,0 +1,32 @@
+
+.bg1 {
+  background: url("./assets/bg-1.png") no-repeat right top;
+  background-size: contain;
+  height: 150vh;
+}
+
+.bg2 {
+  background: url("./assets/bg-2.png") no-repeat left top;
+  background-size: contain;
+  height: 70vh;
+}
+
+.footer {
+  background: url("./assets/footer.jpg") no-repeat left top;
+  background-size: contain;
+  height: 30vh;
+    margin-bottom: 0;
+}
+
+.paragraph {
+    max-width: 30em;
+    margin-top: 1em;
+}
+
+.drawing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30em, max-content));
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 1rem;
+}
