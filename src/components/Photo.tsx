@@ -1,13 +1,13 @@
 import { useState } from "react";
 
-type DrawingProps = {
+type PhotoProps = {
   img: string;
   alt?: string;
   caption?: string;
   date?: string;
 };
 
-export default function Drawing({ img, alt, caption, date }: DrawingProps) {
+export default function Photo({ img, alt, caption, date }: PhotoProps) {
   const [zoomed, setZoomed] = useState(false);
 
   function toggleZoom(e: React.MouseEvent) {
@@ -21,11 +21,11 @@ export default function Drawing({ img, alt, caption, date }: DrawingProps) {
 
   return (
     <>
-      <figure className="drawing-figure">
+      <figure className="photo-figure">
         <img
           src={img}
-          alt={alt || "drawing"}
-          className="drawing"
+          alt={alt || "photo"}
+          className="photo"
           onClick={toggleZoom}
         />
         {(caption || date) && (
@@ -40,7 +40,7 @@ export default function Drawing({ img, alt, caption, date }: DrawingProps) {
       {zoomed && (
         <div className="overlay" onClick={closeZoom}>
           <div className="overlay-content">
-            <img src={img} alt={alt || "drawing"} className="overlay-img" />
+            <img src={img} alt={alt || "photo"} className="overlay-img" />
             {(caption || date) && (
               <h2>
                 {caption}
