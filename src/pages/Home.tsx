@@ -60,7 +60,7 @@ export default function Home () {
             </ul>
             </section>
             <section className='footer'>
-                <p>made with slight distaste by yours truly</p>
+                {/* <p>made with slight distaste by yours truly</p> */}
             </section>
         </>
     );
